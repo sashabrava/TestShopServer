@@ -2,6 +2,10 @@
 
 Java Spring Boot application, simple Internet shop
 
+## Project run
+In order to build and run the project, you should set `JASYPT_ENCRYPTOR_PASSWORD` environment variable,
+which contains a password for Jasypt encrypted database password in `application.properties` file. If something goes wrong, you can change database password to plan text (for testing purposes only). 
+
 # Planned features
 ## Database
 
