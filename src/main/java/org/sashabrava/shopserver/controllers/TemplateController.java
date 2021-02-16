@@ -14,6 +14,11 @@ public class TemplateController {
         return "index";
     }
 
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
     @ResponseBody
     @GetMapping(value = "/api", produces = "application/json")
 
