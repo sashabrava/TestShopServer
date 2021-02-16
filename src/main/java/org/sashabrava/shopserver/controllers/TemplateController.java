@@ -1,14 +1,19 @@
 package org.sashabrava.shopserver.controllers;
 
 import org.json.JSONObject;
+import org.springframework.context.support.MessageSourceAccessor;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Locale;
+
 @Controller
 @RequestMapping(path = "/")
 public class TemplateController {
+
     @GetMapping("/")
     public String index() {
         return "index";
@@ -24,7 +29,11 @@ public class TemplateController {
 
     public String indexAPI() {
         JSONObject json = new JSONObject();
-        json.put("text", "Main page of Shop Server is up and running");
+        ReloadableResourceBundleMessageSource messageSource =    new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("classpath:messages");
+        MessageSourceAccessor accessor = new MessageSourceAccessor(messageSource, Locale.getDefault());
+        String message = accessor.getMessage("index", "Error receiving message from properties file. Please contact the administrator.");
+        json.put("text", message);
         return json.toString();
     }
 
