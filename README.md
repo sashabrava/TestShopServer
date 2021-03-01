@@ -2,6 +2,8 @@
 
 Java Spring Boot application, simple Internet shop
 
+![Main Page](https://user-images.githubusercontent.com/11160215/109452079-3aa79b80-7a4f-11eb-9708-8fc6a2310e51.png)
+
 ## Project run
 In order to build and run the project, you should set `JASYPT_ENCRYPTOR_PASSWORD` environment variable,
 which contains a password for Jasypt encrypted database password in `application.properties` file. If something goes wrong, you can change database password to plan text (for testing purposes only). 
@@ -17,6 +19,12 @@ which contains a password for Jasypt encrypted database password in `application
 There must be 2 pages to access such content: REST and user-friendly HTTP. REST is a priority
 
 ## Pages
+
+* /api/items
+
+ ![Json_Items](https://user-images.githubusercontent.com/11160215/109452169-6fb3ee00-7a4f-11eb-90a1-79577a536905.png)
+
+
 
 ## Template
 
