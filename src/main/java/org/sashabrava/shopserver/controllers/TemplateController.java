@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Locale;
 
 @Controller
-@RequestMapping(path = "/")
+@RequestMapping(path = "/old/index")
 public class TemplateController {
 
     @GetMapping("/")
@@ -26,7 +26,6 @@ public class TemplateController {
 
     @ResponseBody
     @GetMapping(value = "/api", produces = "application/json")
-
     public String indexAPI() {
         JSONObject json = new JSONObject();
         ReloadableResourceBundleMessageSource messageSource =    new ReloadableResourceBundleMessageSource();
