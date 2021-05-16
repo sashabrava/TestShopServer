@@ -31,6 +31,9 @@ generateInnerHTML(items){
 				<td>{item.id}</td>
 				<td>{item.title}</td>
 				<td>{item.description}</td>
+				<td>
+					<Button onClick={() => {this.props.history.push(`/items/${item.id}`)}}>Edit</Button>
+				</td>
 			</tr>
 		)}
 	</tbody>

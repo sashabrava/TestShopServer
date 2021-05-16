@@ -11,7 +11,7 @@ export default class ShopNavBar extends Component {
 			<Nav.Item>
 				<Nav.Link href="/">Home</Nav.Link>
 			</Nav.Item>
-			<Nav.Link href="/old/index/">Old interface</Nav.Link>
-			<Nav.Link href="/old/index/about">Old about</Nav.Link>
+			<Nav.Link href="/old/">Old interface</Nav.Link>
+			<Nav.Link href="/old/about">Old about</Nav.Link>
 		</Navbar>;
 	}}

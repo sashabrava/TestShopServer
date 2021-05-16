@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Locale;
 
 @Controller
-@RequestMapping(path = "/old/index")
+@RequestMapping(path = "/old")
 public class TemplateController {
 
     @GetMapping("/")

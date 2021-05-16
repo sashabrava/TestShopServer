@@ -17,10 +17,10 @@
 	<description>Spring Boot Shop Server</description>
 	<properties>
 		<java.version>11</java.version>
-		<frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+		<frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
 		<frontend-src-dir>src/main/frontend</frontend-src-dir>
-		<node.version>v10.14.2</node.version>
-		<yarn.version>v1.12.1</yarn.version>
+		<node.version>v16.1.0</node.version>
+		<yarn.version>v1.22.10</yarn.version>
 	</properties>
 	<dependencies>
 
