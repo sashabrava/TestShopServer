@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import PageTemplate from './fragments/PageTemplate';
-import { Link } from 'react-router-dom';
 import { Button, } from 'react-bootstrap';
 
-const innerElement = <Button variant="outline-primary">
-<Link to="/items">Items</Link>
-</Button>;
+const innerElement = <Button variant="outline-primary" href="/items">Items</Button>;
 
 class Home extends Component {
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../logo.svg';
 
 export default class ShopNavBar extends Component {
 

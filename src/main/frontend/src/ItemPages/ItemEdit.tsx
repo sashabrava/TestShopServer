@@ -1,14 +1,18 @@
 import { FormEvent, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import PageTemplate from "../fragments/PageTemplate";
-import { Redirect, RouteProps } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 
 type Item = {
     id: number | undefined,
     title: string,
     description: string
 }
-export default function ItemEdit({ match }: any) {
+interface RouteParams {
+    id: string
+}
+const ItemEdit = () => {
+    const params = useParams<RouteParams>();
     const [item, setItem] = useState<Item>();
     const [redirectURL, setRedirectURL] = useState<string>();
     function generateHTML(item: Item | undefined) {
@@ -54,20 +58,21 @@ export default function ItemEdit({ match }: any) {
     }
     useEffect(() => {
         async function getServerItem() {
-            const responseFromServer = await fetch(`/api/items/${match.params.id}`);
+            const responseFromServer = await fetch(`/api/items/${params.id}`);
             if (responseFromServer.ok) {
                 const itemFromServer = await responseFromServer.json() as Item;
                 setItem(itemFromServer)
             }
         }
-        if (match.params?.id && match.params.id !== 'new') {
+        if (params.id && params.id !== 'new') {
             getServerItem();
         }
-        else if (match.params?.id) {
+        else if (params.id) {
             setItem({ id: undefined, title: '', description: '' } as Item)
         }
 
-    }, []);
+    }, [params.id]);
     return redirectURL ? <Redirect to={redirectURL} /> :
         <PageTemplate innerElement={generateHTML(item)} />
 }
+export default ItemEdit;
