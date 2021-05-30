@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/items")
 public class ItemRestController {
+    //Leaving for backward compatibility with Android app, frontend uses spring.data.rest
 
     private final ItemRepository itemRepository;
 

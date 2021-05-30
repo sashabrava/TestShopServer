@@ -5,6 +5,8 @@ import ItemList from './ItemPages/ItemList';
 import ItemEdit from './ItemPages/ItemEdit';
 import Home from './Home';
 
+export const ApiPath = "/api/v2/";
+
 class App extends Component {
   render() {
     return (
